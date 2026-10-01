@@ -1,0 +1,46 @@
+ @import "tailwindcss";  
+
+
+@layer base {
+  body {
+    @apply bg-[#F4F6F9] text-slate-800 font-sans antialiased;
+  }
+
+}
+
+/* Custom modern scrollbars */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+} 
+
+/* Transitions */
+
+.transition-card {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hide scrollbar for tabs */
+
+ .no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} 
