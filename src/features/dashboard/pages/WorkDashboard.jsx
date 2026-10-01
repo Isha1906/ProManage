@@ -123,3 +123,4 @@ function WorkDashboard() {
     );
 }
 
+export default WorkDashboard

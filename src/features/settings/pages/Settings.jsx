@@ -5,6 +5,7 @@ import ProfileSettings from "../components/ProfileSettings";
 import NotificationSettings from "../components/NotificationSettings";
 import AppearanceSettings from "../components/AppearanceSettings";
 import SecuritySettings from "../components/SecuritySettings";
+import SentryTest from "../components/SecuritySettings";
 
 function Settings() {
     const { setcCollapsed, setMobileOpen } = useOutletContext();
@@ -19,11 +20,12 @@ function Settings() {
             <h3 className="mt-2">Account</h3>
             <ProfileSettings />
 
-            <NotificationSettings />  
-            
+            <NotificationSettings />
+
             <AppearanceSettings />
 
-            <SecuritySettings />
+            <SentryTest />
+
         </section>
     )
 }
