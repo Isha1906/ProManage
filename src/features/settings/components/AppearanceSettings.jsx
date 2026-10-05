@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Palette, Sun, Moon, Monitor } from "lucide-react";
-
+import { useTheme } from "../../../app/providers/ThemeProvider";
 function AppearanceSettings() {
-    const [theme, setTheme] = useState("light");
+    const { theme, setTheme } = useTheme();
 
     const themes = [
         {
@@ -26,7 +26,7 @@ function AppearanceSettings() {
     ];
 
     return (
-        <section className="mt-6 bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+        <section className="mt-6 h-100 bg-white rounded-xl border border-slate-200 shadow-sm p-5">
 
             {/* Header */}
             <div className="flex items-center gap-3">
@@ -42,10 +42,6 @@ function AppearanceSettings() {
                     <h2 className="text-base font-semibold text-slate-800">
                         Appearance
                     </h2>
-
-                    <p className="mt-1 text-sm text-slate-500">
-                        Customize how the application looks for you.
-                    </p>
                 </div>
 
             </div>
@@ -57,7 +53,7 @@ function AppearanceSettings() {
                     Theme
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-1 gap-4">
 
                     {themes.map((item) => {
                         const Icon = item.icon;

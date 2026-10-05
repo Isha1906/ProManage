@@ -5,7 +5,8 @@ import ProfileSettings from "../components/ProfileSettings";
 import NotificationSettings from "../components/NotificationSettings";
 import AppearanceSettings from "../components/AppearanceSettings";
 import SecuritySettings from "../components/SecuritySettings";
-import SentryTest from "../components/SecuritySettings";
+// import SentryTest from "../components/SecuritySettings";
+// import ChangePassword from "../components/ChangePassword";
 
 function Settings() {
     const { setcCollapsed, setMobileOpen } = useOutletContext();
@@ -21,10 +22,10 @@ function Settings() {
             <ProfileSettings />
 
             <NotificationSettings />
-
-            <AppearanceSettings />
-
-            <SentryTest />
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                <AppearanceSettings />
+                <SecuritySettings />
+            </div>
 
         </section>
     )
